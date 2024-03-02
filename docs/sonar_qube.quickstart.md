@@ -40,3 +40,20 @@ dotnet tool install --global dotnet-sonarscanner
 8. Create new local project.
 9. Generate report use commands showed in last step on creating project.
 10. Analyze report.
+
+### Analyze with code tests coverage
+
+1. Install coverage tool
+```shell
+dotnet tool install --global dotnet-coverage
+```
+
+2. Generate sonarqube report with additional step running tests coverage check.
+Point out to set valid project name, project token and coverage file name have to match.
+```shell
+dotnet sonarscanner begin /k:"<project_name>" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="<project_token>" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
+dotnet build --no-incremental # Run where app entry point is
+dotnet-coverage collect 'dotnet test' -f xml  -o 'coverage.xml' # Run where project .sln file is
+dotnet sonarscanner end /d:sonar.token="<token>"
+```
+
