@@ -1,0 +1,19 @@
+﻿version: '3.6'
+services:       
+  vault-consul:
+    image: hashicorp/vault:1.14
+    container_name: vault-consul
+    ports:
+      - "8200:8200"
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - ./vault-config/config:/vault/config
+      - ./vault-config/logs:/vault/logs
+    command: server
+    networks:
+      - my_vault
+
+networks:
+  my_vault:
+    external: true

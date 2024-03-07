@@ -1,4 +1,4 @@
-#### Configuration
+#### Library configuration
 
 ```json
 {
@@ -12,8 +12,4 @@
 }
 ```
 
-### Blog post
-
-- Vault dev
-- Vault server
-- 
+### 

@@ -1,0 +1,19 @@
+{
+  "backend": {
+    "consul": {
+      "address": "host.docker.internal:8500",
+      "advertise_addr": "http://host.docker.internal",
+      "path": "my-vault/"
+    }
+  },
+  "listener": {
+    "tcp": {
+      "address": "0.0.0.0:8200",
+      "tls_disable": "1",
+      "tls_cert_file": "/data/certs/cert.pem",
+      "tls_key_file": "/data/certs/key.pem"
+    }
+  },
+  "ui": true,
+  "api_addr": "http://127.0.0.1:8200"
+}

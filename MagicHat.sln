@@ -45,6 +45,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicHat.SecurityTests", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicHat.Vault", "src\MagicHat.Vault\MagicHat.Vault.csproj", "{8E3D0E5F-A10C-4879-A6A4-F475F1BA8CE0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MagicHat.Vault", "MagicHat.Vault", "{FF913E10-259C-4068-A2F0-A60404A2EF3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{9B7691F6-28A3-449B-B4EA-2CA749DCA612}"
+	ProjectSection(SolutionItems) = preProject
+		docs\sonar_qube.quickstart.md = docs\sonar_qube.quickstart.md
+		docs\Vault\hashicorp_vault.quickstart.md = docs\Vault\hashicorp_vault.quickstart.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,7 +80,8 @@ Global
 		{AD8A6C96-0EC3-4A29-AF5F-ABA738A728A3} = {12932B47-0898-477D-B8A6-D68094B4A899}
 		{76C9BED5-17F1-4E1B-BB3F-58426A4EA51D} = {AD8A6C96-0EC3-4A29-AF5F-ABA738A728A3}
 		{6731B473-E11A-409F-8CD8-100EE9F407D5} = {AD8A6C96-0EC3-4A29-AF5F-ABA738A728A3}
-		{8E3D0E5F-A10C-4879-A6A4-F475F1BA8CE0} = {12932B47-0898-477D-B8A6-D68094B4A899}
+		{FF913E10-259C-4068-A2F0-A60404A2EF3C} = {12932B47-0898-477D-B8A6-D68094B4A899}
+		{8E3D0E5F-A10C-4879-A6A4-F475F1BA8CE0} = {FF913E10-259C-4068-A2F0-A60404A2EF3C}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{149766B4-463E-4EC7-9FAD-569C4AAB4DB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

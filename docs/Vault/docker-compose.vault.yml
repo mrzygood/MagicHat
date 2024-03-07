@@ -1,0 +1,22 @@
+﻿version: '3.6'
+services:
+  vault:
+    image: hashicorp/vault:1.14
+    container_name: vault
+    ports:
+      - "8200:8200"
+    environment:
+      - VAULT_ADDR=http://127.0.0.1:8200
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - ./docker/vault/data:/vault/file # Might requires to comment before run
+      - ./docker/vault/config:/vault/config
+      - ./docker/vault/logs:/vault/logs
+    command: server
+    networks:
+      - my_vault
+
+networks:
+  my_vault:
+    external: true
